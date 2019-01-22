@@ -22,7 +22,7 @@
         $.fn.CreateMenu = function()
         {
             $(this).append("<div class ='menu' ></div>");
-            $(".menu").append("<img src = '../img/Puissance4.png'>");
+            $(".menu").append("<img src = 'img/Puissance4.png'>");
             $(".menu").append("<button id='buttonPlay'>Jouer</button>");
             $(".menu").append("<button id= 'buttonOptions'>Options</button>");
         }
@@ -31,16 +31,16 @@
         {
             $("#game").append("<div class ='menuOptions'></div>");
             $(".menuOptions").append("<div id ='sizePuissance'></div>");
-            $(".menuOptions").append("<img id='mytest' src ='../img/sound.png'>");
+            $(".menuOptions").append("<img id='mytest' src ='img/sound.png'>");
             $(".menuOptions").addResize(7,"sizeGridX", "x", "buttonResizeX");
             $(".menuOptions").addResize(6,"sizeGridY", "y", "buttonResizeY");
 
             $("#mytest").click(function(event)
             {
                 if(event.target.src == "file:///home/wac/development/wac/Projects/Puissance_4/JavaScript_Puissance4/img/sound.png")
-                    event.target.src = "../img/mute.png";
+                    event.target.src = "img/mute.png";
                 else
-                    event.target.src = "../img/sound.png";
+                    event.target.src = "img/sound.png";
             });
         }
 
@@ -94,7 +94,7 @@
 
                 for(var j = 0; j < sizeX; j+=1)
                 {
-                    test.append("<img class = 'col" + j + " row" +i +" caseGrid' src='../img/grid.png'></div>");
+                    test.append("<img class = 'col" + j + " row" +i +" caseGrid' src='img/grid.png'></div>");
                     limitColonne["col" + j] = sizeY * 80 - 30;
                 }
             }
@@ -237,7 +237,7 @@
 
         $.fn.AnimateJeton = function(colonne, jeton)
         {
-            var audio = $("body").addAudio(jeton,"../music/jeton.ogg");
+            var audio = $("body").addAudio(jeton,"music/jeton.ogg");
             audio.pause();
             $("#"+jeton.id).animate({ top: "+=" + limitColonne[colonne] }, 300, function()
             {
@@ -327,10 +327,10 @@
         $.fn.MenuChoiceColor = function()
         {
             colors = {
-                "green" : "../img/jetonGreen.png",
-                "red" : "../img/jetonRed.png",
-                "blue" : "../img/jetonBlue.png",
-                "rose" : "../img/jetonRose.png"
+                "green" : "img/jetonGreen.png",
+                "red" : "img/jetonRed.png",
+                "blue" : "img/jetonBlue.png",
+                "rose" : "img/jetonRose.png"
             }
 
             $("#game").css("display", "none");
@@ -342,16 +342,16 @@
             $(".menuChoiceColor").append("<h2>Choisir une couleur</h2>");
 
             $(".menuChoiceColor").append("<ul class = 'submenu'></ul>");
-            $(".submenu").append("<li id = 'player1'><a class = 'namePlayer' href='#'>Player 1 <img class = 'options' src = '../img/jetonGreen.png'></a><ul class ='okletest'></ul></li>");
-            $(".submenu").append("<li id = 'player2'><a class = 'namePlayer' href='#'>Player 2 <img class = 'options' src = '../img/jetonRed.png'</a><ul class ='okletest'></ul></li>");
+            $(".submenu").append("<li id = 'player1'><a class = 'namePlayer' href='#'>Player 1 <img class = 'options' src = 'img/jetonGreen.png'></a><ul class ='okletest'></ul></li>");
+            $(".submenu").append("<li id = 'player2'><a class = 'namePlayer' href='#'>Player 2 <img class = 'options' src = 'img/jetonRed.png'</a><ul class ='okletest'></ul></li>");
 
             for(i in colors)
             {
                 var srcPlayer1 = $("#player1 img")[0].src.split("/");
-                srcPlayer1 = "../img/" + srcPlayer1[srcPlayer1.length - 1];
+                srcPlayer1 = "img/" + srcPlayer1[srcPlayer1.length - 1];
 
                 var srcPlayer2 = $('#player2 img')[0].src.split("/");
-                srcPlayer2 = "../img/" + srcPlayer2[srcPlayer2.length - 1];
+                srcPlayer2 = "img/" + srcPlayer2[srcPlayer2.length - 1];
 
 
                 if(srcPlayer1 != colors[i] && srcPlayer2 != colors[i])
@@ -464,11 +464,11 @@
 
 //---------------------------------------------------------------------
 
-$("body").puissance4().addAudio($("#game"), "../music/White-Dance.ogg");
+$("body").puissance4().addAudio($("#game"), "music/White-Dance.ogg");
 $("#game").puissance4().CreateMenuOptions();
 $(".menuOptions").puissance4().CreateMenu();
-$("body").puissance4().AddSongHover($("button"), "../music/2003.ogg");
-$("body").puissance4().AddSongClick($("button"), "../music/2018.ogg");
+$("body").puissance4().AddSongHover($("button"), "music/2003.ogg");
+$("body").puissance4().AddSongClick($("button"), "music/2018.ogg");
 $("#game").puissance4().closeElement($("#buttonOptions"));
 
 $("#buttonPlay").click(function()
