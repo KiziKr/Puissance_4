@@ -1,0 +1,282 @@
+body
+{
+	background-color:#272525;
+}
+
+nav
+{
+	z-index: 10000;
+	position: relative;
+	height: 125px;
+	background-color:#bcb3b3;
+}
+
+canvas
+{
+	height: 100%;
+	width: 100%;
+}
+
+.reload
+{
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	width: 200px;
+	font-size: 20px;
+}
+
+.menuChangePlayer
+{
+	position: relative;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -430px;
+	font-size: 20px;
+	color:  #c65f00;
+}
+
+.img-blur {
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); }
+
+.submenu, .submenu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.submenu {
+    text-align: center;
+}
+
+.submenu li {
+/* on place les liens du menu horizontalement */
+    display: inline-block;
+}
+.submenu ul li {
+/* on enlève ce comportement pour les liens du sous menu */
+    display: inherit;
+}
+
+.submenu a {
+    text-decoration: none;
+    display: block;
+	color:#000;
+}
+.submenu ul {
+    position: absolute;
+/* on cache les sous menus complètement sur la gauche */
+    left: -999em;
+    text-align: left;
+    z-index: 1000;
+}
+.submenu li:hover ul {
+/* Au survol des li du menu on replace les sous menus */
+    left: auto;
+}
+
+.namePlayer
+{
+	font-size: 25px;
+
+}
+
+.menuChoiceColor
+{
+	margin-left: 600px;
+	margin-top: 150px;
+	position: absolute;
+	background-color: #373b42;
+	height: 500px;
+	width: 600px;
+	border-radius: 10%;
+}
+
+.menuChoiceColor h2
+{
+	background-color: black;
+	font-size: 25px;
+	text-align: center;
+	margin-top: 45px;
+	height: 30px;
+	color :white;
+}
+
+.menuChoiceColor button
+{
+	font-size: 25px;
+	margin-left: 225px;
+	margin-top: 200px;
+	height: 50px;
+	width: 150px;
+	border: solid 1px  #db3b3b;
+}
+#player1, #player2
+{
+	display: inline-block;
+	list-style: none;
+}
+
+.options
+{
+	text-decoration: none;
+	background-color: #db3b3b;
+	border: solid 1px black;
+	border-bottom: 0px;
+	display: block;
+	height:75px;
+	width: 100px;
+}
+
+#game
+{
+	margin-top: 100px;
+	margin-bottom: 40px;
+}
+
+.menuOptions
+{
+	margin-left: 650px;
+	position: relative;
+	padding: 0;
+	height: 500px;
+	width: 500px;
+	border-radius: 1%;
+}
+
+.menuOptions
+{
+	background-color: #202021;
+}
+
+#mytest
+{
+	height: 60px;
+	width: 60px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.dropdown-toggle
+{
+	display: inline-block;
+}
+
+.resizeGrid
+{
+	background-color: yellow;
+	margin-left: 20px;
+	margin-top: 10px;
+	height: 60px;
+	width: 60px;
+	border-radius: 10%;
+}
+
+.sizeGrid
+{
+	float: right;
+	margin-right: 5px;
+}
+
+.buttonResize
+{
+	margin-top: 5px;
+	margin-left: 20px;
+	width: 60px;
+	height: 30px;
+	margin-bottom: 50px;
+}
+
+.buttonResize button
+{
+	background-color: #db3b3b;
+	border: 1px black solid;
+	color:black;
+	height:100%;
+	width: 50%;
+}
+
+p
+{
+	font-size: 2px;
+}
+.menuOptions #sizePuissance
+{
+	background-color: #202021;
+	padding: 15px;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+	border-radius: 1%;
+	color:#87877f;
+}
+
+#posX, #posY
+{
+	height: 41px;
+	width: 41px;
+	border: 1px solid black;
+	background-color: white;
+}
+
+.menuOptions p
+{
+	margin-left: 10px;
+	font-size: 20px;
+	color:black;
+	margin-bottom: 0;
+}
+
+.menuOptions select
+{
+	margin-left: 30px;
+}
+
+.grid
+{
+	text-align: center;
+}
+
+.caseGrid
+{
+	width: 100px;
+	height: 80px;
+}
+
+.jeton
+{
+}
+
+.menu
+{
+	z-index: 1;
+	position: absolute;
+	padding: 20px;
+	padding-top: 10px;
+	height: 500px;
+	width: 500px;
+	border-radius: 1%;
+	background-color: #373b42;
+	margin-top: -410px;
+}
+
+button
+{
+	background-color: yellow;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 50px;
+	cursor:pointer;
+}
+
+button:hover
+{
+	background-color: #e0e81e;
+}
