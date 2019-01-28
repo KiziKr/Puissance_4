@@ -1,8 +1,6 @@
 # Puissance_4
 
-#### Run the application
+Steps to run this project:
 
-```
-npm install
-npm start
-```
+1. Run `npm i` command
+2. Run `npm start` command
