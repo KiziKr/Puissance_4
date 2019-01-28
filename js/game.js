@@ -249,7 +249,7 @@
                 {
                     $("#"+jeton.id).animate({ top: "+=" + 40 }, 100, function()
                     {
-                        $("#"+jeton.id).animate({ top: "-=" + 15 }, 150, function()
+                        $("#"+jeton.id).animate({ top: "-=" + 15 }, 125, function()
                         {
                             audio.play();
                             $("#"+jeton.id).animate({ top: "+=" + 15 }, 100, function()
