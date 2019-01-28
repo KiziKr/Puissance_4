@@ -1,6 +1,6 @@
 # Puissance_4
 
-# Run
+## Run the application
 
 ```
 npm install
