@@ -6,7 +6,19 @@ let window
 
 function createWindow () {
   // Create the browser window.
-  window = new BrowserWindow({ title: "Puissance 4", width: 1250, height: 950 })
+  window = new BrowserWindow(
+    { 
+      title: "Puissance 4",
+      width: 1250,
+      height: 950,
+      webPreferences: {
+        "nodeIntegration": false,
+        "contextIsolation": true,
+        "sandbox": true,
+        "webSecurity": true
+      } 
+    }
+  )
 
   var menu = Menu.buildFromTemplate([])
   Menu.setApplicationMenu(menu); 
