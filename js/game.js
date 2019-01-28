@@ -102,7 +102,7 @@
                 }
             }
 
-            $("#game").append("<button class = 'reload'>Retour au menu principal</button");
+            $("#game").append("<button class = 'reload'>Retour</button");
             $('.reload').click(function()
             {
                 location.reload();
