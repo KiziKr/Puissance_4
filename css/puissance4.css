@@ -1,6 +1,7 @@
 body
 {
 	background-color:#272525;
+	padding-top: 35px;
 }
 
 nav
@@ -34,9 +35,12 @@ canvas
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -430px;
+	margin-top: 0px;
+	margin-bottom: -10px;
 	font-size: 20px;
-	color:  #c65f00;
+	height: 100px;
+	color:  #ccb399;
+	background-color: #b83737;
 }
 
 .img-blur {
@@ -90,10 +94,10 @@ canvas
 
 .menuChoiceColor
 {
-	margin-left: 600px;
+	margin: auto auto;
 	margin-top: 150px;
-	position: absolute;
 	background-color: #373b42;
+	padding-top: 3px;
 	height: 500px;
 	width: 600px;
 	border-radius: 10%;
@@ -143,7 +147,7 @@ canvas
 
 .menuOptions
 {
-	margin-left: 650px;
+	margin: auto auto;
 	position: relative;
 	padding: 0;
 	height: 500px;

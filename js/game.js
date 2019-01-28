@@ -54,7 +54,7 @@
 
             $(".menuChangePlayer").remove();
 
-            $(this).append("<div class = 'menuChangePlayer'>"+NamePlayer+ " " + test+ "</div>");
+            $('body').prepend("<div class = 'menuChangePlayer'>"+NamePlayer+ " " + test+ "</div>");
 
             $(".menuChangePlayer").animate({ fontSize: "+="  +40 }, 400);
         }
@@ -71,8 +71,11 @@
             {
                 var size = $("#"+nameId).text();
             
-                if($(event.target).text() == "+")
-                    var size = +size + 1;
+                if($(event.target).text() == "+") {
+                    if(+size < 7) {
+                        var size = +size + 1;
+                    }
+                }
                 else
                     if(+size > 4)
                         var size = +size - 1;
@@ -239,17 +242,17 @@
         {
             var audio = $("body").addAudio(jeton,"music/jeton.ogg");
             audio.pause();
-            $("#"+jeton.id).animate({ top: "+=" + limitColonne[colonne] }, 300, function()
+            $("#"+jeton.id).animate({ top: "+=" + limitColonne[colonne] }, 150, function()
             {
                 audio.play();
-                $("#"+jeton.id).animate({ top: "-=" + 40 }, 125, function()
+                $("#"+jeton.id).animate({ top: "-=" + 40 }, 150, function()
                 {
-                    $("#"+jeton.id).animate({ top: "+=" + 40 }, 125, function()
+                    $("#"+jeton.id).animate({ top: "+=" + 40 }, 100, function()
                     {
-                        $("#"+jeton.id).animate({ top: "-=" + 15 }, 125, function()
+                        $("#"+jeton.id).animate({ top: "-=" + 15 }, 150, function()
                         {
                             audio.play();
-                            $("#"+jeton.id).animate({ top: "+=" + 15 }, 125, function()
+                            $("#"+jeton.id).animate({ top: "+=" + 15 }, 100, function()
                             {
                                 audio.play();
                                 game = true;
@@ -290,7 +293,6 @@
             var audio = document.createElement("audio");
             $(element).append(audio);
             audio.src = src;
-            audio.play();
             return audio;
         }
 
@@ -299,8 +301,7 @@
             button.each(function(key, val)
             {
                 var audio = $("body").addAudio(val, src);
-                audio.pause();
-                audio.volume = 0.15;
+                audio.volume = 0.05;
 
                 $(val).mouseover(function()
                 {
@@ -314,8 +315,7 @@
             button.each(function(key, val)
             {
                 var audio = $("body").addAudio(val, src);
-                audio.pause();
-                audio.volume = 0.30;
+                audio.volume = 0.08;
 
                 $("button").mousedown(function(event)
                 {
@@ -464,7 +464,7 @@
 
 //---------------------------------------------------------------------
 
-$("body").puissance4().addAudio($("#game"), "music/White-Dance.ogg");
+$("body").puissance4().addAudio($("#game"), "music/White-Dance.ogg").play();
 $("#game").puissance4().CreateMenuOptions();
 $(".menuOptions").puissance4().CreateMenu();
 $("body").puissance4().AddSongHover($("button"), "music/2003.ogg");

@@ -1,0 +1,23 @@
+{
+  "name": "puissance_4",
+  "version": "1.0.0",
+  "description": "School Work",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiziKr/Puissance_4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiziKr/Puissance_4/issues"
+  },
+  "homepage": "https://github.com/KiziKr/Puissance_4#readme",
+  "devDependencies": {
+    "electron": "^4.0.2"
+  }
+}
