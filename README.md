@@ -8,7 +8,9 @@ Steps to run this project:
 ## Informations sur le projet
 
 ### Outils utilisés
-Javascript, JQuery, Electron.js
+- Javascript
+- JQuery
+- Electron.js
 
 ### Contraintes
 - Projet réalisé en 4jours(J'ai ajouté electron apres que le projet soit fini)
