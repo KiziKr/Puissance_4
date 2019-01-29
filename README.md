@@ -13,5 +13,5 @@ Steps to run this project:
 - Electron.js
 
 ### Contraintes
-- Projet réalisé en 4jours(J'ai ajouté electron apres que le projet soit fini)
+- Projet réalisé en 4jours
 - En faire un plugin jquery
